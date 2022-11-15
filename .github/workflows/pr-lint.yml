@@ -27,9 +27,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
-      - name: Check if all files end in newline    
-        uses: fernandrone/linelint@0.0.4
-        id: linelint 
+      - name: Use action to check for CRLF endings
+        uses: erclu/check-crlf@v1
 
       - name: Comment for PR title conformance
         if: failure()
