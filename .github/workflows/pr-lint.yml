@@ -28,7 +28,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
       - name: Linelint
-        uses: actions/linelint@master
+        uses: fernandrone/linelint@master
         id: linelint
 
       - name: Comment for PR title conformance
