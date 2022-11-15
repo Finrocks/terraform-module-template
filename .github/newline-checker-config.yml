@@ -1,2 +1,0 @@
-autoCommit: false  # If false, the bot will still comment in the pull request, so you can known which files are wrong and fix them yourself.
-ignorePaths: ["bin/**", "node_modules/**", "out/**"] # Globs to be ignored
