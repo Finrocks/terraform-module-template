@@ -27,8 +27,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
-      - name: Use action to check for CRLF endings
-        uses: erclu/check-crlf@v1
+      - name: Linelint
+        uses: actions/linelint@master
+        id: linelint
 
       - name: Comment for PR title conformance
         if: failure()
