@@ -26,6 +26,12 @@ jobs:
           preset: conventional-changelog-angular@^5.0.6
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Check if all files end in newline    
+        uses: Logerfo/newline-action@0.0.3
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          config-path: .github/newline-checker-config.yml  
 
       - name: Comment for PR title conformance
         if: failure()
