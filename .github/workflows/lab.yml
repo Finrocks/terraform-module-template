@@ -32,4 +32,4 @@ jobs:
         with:
           github-token: ${{secrets.GITHUB_TOKEN}} # optional, default to '${{ github.token }}'  
           config-path: .github/labeler.yml # optional, default to '.github/labeler.yml'
-          config-repo: my-org/my-repo # optional, default to '${{ github.repository }}'
+          #config-repo: my-org/my-repo # optional, default to '${{ github.repository }}'
