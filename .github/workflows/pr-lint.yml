@@ -32,7 +32,7 @@ jobs:
           
       - name: Checking if all files end with a newline
         uses: fernandrone/linelint@master
-        id: qqlinelintqq
+        id: linelint
 
       - name: Comment for PR title conformance
         if: failure()
