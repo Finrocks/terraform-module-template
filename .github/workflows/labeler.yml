@@ -7,12 +7,6 @@ on:
   # Semantic release? Done.
   # Make a file change in a mono repo. Tag the mono repo getting changed to generate better release!
 
-
-
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref_name }}
-  cancel-in-progress: true
-
   issues:
   # Useful for triaging error!
   # '- [x] Is this a bug?' = 'bug' label!
@@ -21,6 +15,12 @@ concurrency:
   # To pickup comment body in pr or issue and generate a label. 
   # Imagine someone comment 'Me too, I get TimeoutException from ...' in comment body. 
   # Generate a 'bug/timeout' label for better triaging!
+
+
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref_name }}
+  cancel-in-progress: true
 
 permissions:
   # Setting up permissions in the workflow to limit the scope of what it can do. Optional!
